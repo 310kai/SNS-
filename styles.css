@@ -1,0 +1,78 @@
+:root{
+  --bg:#f5f7fb; --ink:#111;
+  --brand:#06c755; --primary:#2c7be5;
+  --card:#fff; --card2:#f0f5f2;
+  --shadow:0 12px 40px rgba(0,0,0,.12);
+}
+
+/* 基本 */
+body{
+  margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",Arial;
+  background:var(--bg); color:var(--ink);
+  padding-top:60px; /* 固定ヘッダー分 */
+}
+.container{ width:min(1100px,92vw); margin:0 auto; }
+.section{ padding: clamp(36px,5vw,64px) 0; }
+.lead{ font-size:clamp(16px,1.8vw,20px); line-height:1.8; }
+
+/* ヘッダー */
+.topbar{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 16px;
+  background:#ffffffb3; /* 半透明 */
+  backdrop-filter:blur(10px) saturate(1.2); /* ぼかし */
+  border-bottom:1px solid #0001;
+}
+.brand{ font-weight:800; color:#111; text-decoration:none; }
+.topnav{ display:flex; gap:12px; }
+.topnav a{ color:#223; text-decoration:none; font-weight:600; }
+.topnav a:hover{ text-decoration:underline; }
+
+/* CTAボタン */
+.btn-line{ background:var(--brand); color:#fff; text-decoration:none;
+  padding:10px 16px; border-radius:999px; font-weight:700;
+  box-shadow:0 6px 16px rgba(6,199,85,.25); }
+.btn-large{ padding:12px 20px; font-size:1.05rem; }
+.btn-small{ padding:8px 14px; font-size:.95rem; }
+.txt-link{ color:#1967d2; text-decoration:none; }
+.txt-link:hover{ text-decoration:underline; }
+
+/* ヒーロー */
+.hero__grid{ display:grid; gap:clamp(16px,4vw,32px); grid-template-columns:1.1fr .9fr; align-items:center; }
+.hero h1{ font-size:clamp(28px,5vw,48px); margin:0 0 .6rem; }
+.hero__visual img{ width:100%; border-radius:16px; box-shadow:var(--shadow); }
+
+/* About */
+.about__grid{ display:grid; gap:clamp(16px,3vw,28px); grid-template-columns:.9fr 1.1fr; align-items:center; }
+.portrait img{ width:100%; max-width:460px; border-radius:16px; box-shadow:var(--shadow); }
+.bullets{ margin:12px 0 0; padding-left:1.1em; }
+
+/* ストーリー（横スワイプ） */
+.story-head{ text-align:center; margin-bottom:12px; }
+.story-progress{ width:min(760px,92vw); height:6px; border-radius:999px; background:#0002; margin:8px auto; overflow:hidden; }
+.story-progress__bar{ height:100%; width:0%; background:var(--primary); transition:width .25s; }
+.story-carousel{ width:100%; height:min(62dvh,680px); display:flex; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; }
+.story-slide{ flex:0 0 100%; scroll-snap-align:start; padding:clamp(16px,3.6vw,40px); display:flex; align-items:center; justify-content:center; }
+.story-inner{ width:min(1100px,92vw); display:grid; gap:clamp(14px,3vw,36px); grid-template-columns:1.15fr .85fr; align-items:center; }
+.story-decor{ font-size:clamp(42px,9vw,110px); text-align:center; }
+.story-nav{ display:flex; gap:14px; justify-content:center; margin-top:10px; }
+.story-btn{ border:0; background:#1f3e2a; color:#fff; padding:10px 14px; border-radius:10px; cursor:pointer; }
+.story-dots{ display:flex; gap:10px; list-style:none; margin:0; padding:0; }
+.story-dots button{ width:10px; height:10px; border-radius:50%; border:0; background:#9db5a3; opacity:.55; cursor:pointer; }
+.story-dots button[aria-selected=\"true\"]{ background:#1f3e2a; opacity:1; transform:scale(1.15); }
+
+/* Q&A */
+.qa .faq{ list-style:none; padding:0; display:grid; gap:14px; }
+.qa .faq li{ background:#fff; border-radius:14px; padding:14px; box-shadow:0 6px 16px #0001; }
+
+/* 最終CTA */
+.last-cta{ background:linear-gradient(180deg,#eaf6ef 0%, #f7fbf8 100%); text-align:center; }
+.footer{ padding:18px 0; border-top:1px solid #0001; background:#fff; }
+.footer__inner{ display:flex; justify-content:space-between; align-items:center; }
+
+/* モバイル */
+@media (max-width:900px){
+  .hero__grid, .about__grid, .story-inner{ grid-template-columns:1fr; }
+  .story-decor{ order:-1; }
+}
