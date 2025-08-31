@@ -3,83 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>気合いゼロで変わる体｜Kai</title>
-  <meta name="description" content="「意思」ではなく「仕組み」で変わる。Kaiの習慣化メソッド。ストーリーは横スワイプで読めます。">
+  <title>RESET LAB｜気合い0で変わる体</title>
+  <meta name="description" content="RESET LAB ― あの頃の体にリセット。最初の一歩は気合いではなく仕組み。ストーリーは横スワイプで読めます。">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- 固定ヘッダー -->
+  <!-- 固定＆背景ぼかしヘッダー -->
   <header class="topbar" role="banner">
-    <a class="brand" href="#home">resetbody</a>
+    <a class="brand" href="#home">RESET LAB</a>
     <nav class="topnav" aria-label="グローバルナビ">
       <a href="#about">自己紹介</a>
       <a href="#story">ストーリー</a>
-      <a href="#qa">Q&A</a>
+      <a href="#qa">Q&amp;A</a>
       <a href="#contact" class="btn-line btn-small">LINEで無料登録</a>
     </nav>
   </header>
 
   <!-- ヒーロー -->
-  <section id="home" class="section hero" aria-label="ヒーロー">
+  <section id="home" class="section hero hero-alt" aria-label="ヒーロー">
     <div class="container hero__grid">
-      <div>
-        <h1>気合いゼロで変わる体</h1>
-        <p class="lead">最初の一歩は「意思」ではなく「仕組み」。<br>ムリせず続けられる習慣化メソッドを、無料で配布しています。</p>
-        <div class="cta-row">
-          <a id="lineHero" class="btn-line btn-large" href="#" target="_blank" rel="noopener">LINEで無料登録</a>
-          <a id="lineHeroTxt" class="txt-link" href="#" target="_blank" rel="noopener">LINE追加リンクを開く</a>
-        </div>
-      </div>
+      <div class="hero-text">
+        <h1 class="brand-title">RESET LAB</h1>
+        <p class="brand-sub">あの頃の体にリセット</p>
+
       <div class="hero__visual">
-        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="変化のイメージ">
+        <img src="images/hero-photo.jpg" alt="RESET LABのイメージ写真">
       </div>
+
+        <div class="hero-message">
+          <h2>気合い0で変わる体</h2>
+          <p>最初の一歩は気合いではなく仕組み。</p>
+        </div>
+
     </div>
   </section>
 
-  <!-- 自己紹介 -->
-  <section id="about" class="section about" aria-label="自己紹介">
+  <!-- 自己紹介（画像左 / 角丸パネル） -->
+  <section id="about" class="section about about-alt" aria-label="自己紹介">
     <div class="container about__grid">
       <div class="portrait">
-        <img src="images/kai.png" alt="Kaiの顔写真">
+        <img src="images/kai.png" alt="Kaiの写真">
       </div>
-      <div>
-        <h2>ABOUT ME</h2>
-        <p>こんにちは、Kaiです。埼玉を拠点に活動中。かつては「続かない自分」に悩みましたが、<strong>意思ではなく仕組み</strong>で−15kgを達成。今は、誰でも続けられる習慣設計を伝えています。</p>
-        <ul class="bullets">
-          <li>ムリな食事制限なし（外食・揚げ物OKの設計）</li>
-          <li>忙しい社会人でも1日5分から</li>
-          <li>仕組み化で「続けやすさ」を最優先</li>
-        </ul>
+
+      <div class="about-text">
+        <h2 class="about-heading">ABOUT ME</h2>
+        <div class="about-panel">
+          <div class="about-panel__inner">
+            <p>
+              こんにちは、Kaiです！<br>
+              埼玉を拠点に活動している24歳の社会人です。<br>
+              僕はこれまで、体型の悩みや「続けられない自分」にずっと苦しんできました。何度もジムやダイエットに挑戦しては挫折し、気合いと根性だけでは変われないことを痛感しました。
+            </p>
+            <p>
+              そんな中で出会ったのが「習慣化の仕組み」です。小さな工夫を積み重ねることで、無理なく体を変えることに成功し、気持ちや自信まで前向きに変わっていきました。だからこそ今は、「もう一度変わりたい」と願う人の背中を押したい。
+            </p>
+            <p>
+              僕と同じように挫折を経験した人が、再挑戦できるきっかけを届けたいと思っています。ここは、気合いゼロでも未来を変えられる場所です。一緒に、小さな習慣から新しい自分をつくっていきましょう！
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ストーリー（横スワイプ） -->
-  <section id="story" class="section story-section" aria-label="Kaiのストーリー">
+  <!-- ストーリー（NORTH FACE風カードUI・横スワイプ） -->
+  <section id="story" class="section story-v2" aria-label="Kaiのストーリー">
     <div class="container">
       <header class="story-head">
         <h2>僕のストーリー</h2>
         <p class="story-sub">横にスワイプして読めます</p>
-        <div class="story-progress"><div class="story-progress__bar" id="storyProgress"></div></div>
-        <div class="story-counter"><span id="storyCounter">1</span>/6</div>
       </header>
     </div>
 
-    <div id="storyCarousel" class="story-carousel" tabindex="0" aria-roledescription="carousel">
-      <section class="story-slide s1"><div class="story-inner"><div class="story-content"><h3>日常・現実の世界</h3><p>朝、アラームが鳴ってもなかなか起きられない。鏡の前に立つと、学生の頃より増えた体重と、疲れた顔が映っている。「自分、太ったな…」。仕事に追われて何も変えられない毎日。夜はついコンビニの揚げ物やお菓子に手が伸びる。「明日から頑張ろう」と思っても、同じ日々の繰り返し…。</p></div><div class="story-decor">⏰😪🍗</div></div></section>
-      <section class="story-slide s2"><div class="story-inner"><div class="story-content"><h3>決意</h3><p>年末に地元へ帰省。同窓会で、かつて好きだった人と再会。「かい、ちょっと太った？」——笑ってごまかしたけれど、胸に刺さる言葉。自信を失っている自分が悔しくて、情けなくて。「もう一度、自分を変えたい」と強く決意した。</p></div><div class="story-decor">🎄💬💥</div></div></section>
-      <section class="story-slide s3"><div class="story-inner"><div class="story-content"><h3>失敗の連続</h3><p>何をやっても続かない。ジムは三日坊主、プロテインは積んだまま。気合と根性で頑張ろうとしても、夜にはまた揚げ物やお菓子へ…。「またできなかった」と自己嫌悪のループ。</p></div><div class="story-decor">🏋️‍♂️🥤↺</div></div></section>
-      <section class="story-slide s4"><div class="story-inner"><div class="story-content"><h3>出会い</h3><p>同僚の一言。「俺も昔太ってたけど、習慣を変えたら少しずつ痩せたよ」。聞いてみると、意志や根性ではなく<strong>無理なく続けられる仕組みづくり</strong>。意志じゃなくて仕組みで変わる。本当に大切なのは習慣化だと気づいた。</p></div><div class="story-decor">🧩🔁💡</div></div></section>
-      <section class="story-slide s5"><div class="story-inner"><div class="story-content"><h3>成功の連続</h3><p>まずは小さな変化。顔が少しシュッと、体が軽く。トレーナーに相談しながら習慣を整え、無理な制限なしで継続。気づけば体重は−15kg。着られなかった服が似合い、「若返った！」と言われ、鏡の前の自分に堂々と笑えるようになった。</p></div><div class="story-decor">📉👕✨</div></div></section>
-      <section class="story-slide s6"><div class="story-inner"><div class="story-content"><h3>体系化</h3><p>経験を「誰でも無理なく取り組める習慣化ダイエット法」に体系化。高校からの友人にも伝えると「じゃあ俺もやってみる！」と挑戦。少しずつ体が変わり、「家族に痩せたね！って言われた」と報告が。これは僕だけの方法じゃない。誰にでもできる仕組みだと確信した。</p></div><div class="story-decor">📚🤝🌱</div></div></section>
+    <!-- 水平カルーセル（1画面=100%） -->
+    <div id="storyCarousel" class="story-carousel-v2" tabindex="0" aria-roledescription="carousel">
+      <!-- 1 -->
+      <article class="story-card" data-title="日常・現実の世界" data-idx="1">
+        <div class="card-inner">
+          <div class="card-count" aria-live="polite">1 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">日常・現実の世界</h3>
+              <p>
+                朝、アラームが鳴ってもなかなか起きられない。
+ 鏡の前に立つと、学生の頃より増えた体重と、疲れた顔が映っている。
+「自分、太ったな…」
+ そう思いながらも、仕事に追われて何も変えられない毎日。
+夜はついコンビニの揚げ物やお菓子に手が伸びる。
+ 「明日から頑張ろう」と思っても、気づけば同じ日々の繰り返し…。
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-1.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="story-card" data-title="決意" data-idx="2">
+        <div class="card-inner">
+          <div class="card-count">2 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">決意</h3>
+              <p>
+                ある日、年末に地元へ帰省したとき。
+ 同窓会で、かつて好きだった人と久しぶりに再会した。
+緊張しながら話しかけたその瞬間、何気ない一言が飛んできた。
+「かい、ちょっと太った？」
+その言葉に笑ってごまかしたけれど、心の奥では針で刺されたように痛かった。
+ あの頃より自信を失っている自分が悔しくて、情けなくて…。
+「もう一度、自分を変えたい。」
+ そう心から決意した瞬間だった。
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-2.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="story-card" data-title="失敗の連続" data-idx="3">
+        <div class="card-inner">
+          <div class="card-count">3 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">失敗の連続</h3>
+              <p>
+                でも、最初は何をやっても続かない。
+ ジムに行っても三日坊主、プロテインを買っても積んだまま。
+気合と根性で頑張ろうとしても、夜にはつい揚げ物やお菓子に手が伸びる。
+ 「またできなかった…」と自己嫌悪に陥るばかりで、痩せることすらできなかった。
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-3.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="story-card" data-title="出会い" data-idx="4">
+        <div class="card-inner">
+          <div class="card-count">4 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">出会い</h3>
+              <p>
+                そんな時、職場の同僚に言われた一言。
+ 「俺も昔太ってたけど、習慣を変えたら少しずつ痩せていったよ」
+半信半疑で話を聞いてみると、そこにあったのは意志や根性じゃなく、
+ 無理なく続けられる仕組みづくり だった。
+その瞬間、気づいたんです。
+ 「意志じゃなくて、仕組みで変わること。
+ 無理なく習慣を作ることこそが、本当に大切なんだ」と。
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-4.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="story-card" data-title="成功の連続" data-idx="5">
+        <div class="card-inner">
+          <div class="card-count">5 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">成功の連続</h3>
+              <p>
+                最初に現れたのは、ほんの小さな変化だった。
+ 顔が少しシュッとした気がする、体が前より動きやすくなった気がする。
+その小さな変化が嬉しくて、トレーナーに相談しながら少しずつ習慣を整えていった。
+無理な制限はせず、好きだった揚げ物も完全にやめることなく続けられた。
+ それでも気づけば、体重はマイナス15kg。
+着られなかった服が似合うようになり、周りからは「若返った！」と言われるようになった。
+ そして鏡の前に立つ自分も、堂々と笑えるようになっていた。
+気づけばそこにいたのは、健康的で、自信に満ちた理想の自分だった。
+
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-5.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="story-card" data-title="体系化" data-idx="6">
+        <div class="card-inner">
+          <div class="card-count">6 / 6</div>
+          <div class="card-grid">
+            <div class="card-text">
+              <h3 class="card-title">体系化</h3>
+              <p>
+                そして、この経験を一人でも多くの人に届けたいと思い、
+ 「誰でも無理なく取り組める習慣化ダイエット法」として体系化しました。
+高校からの友人で、いつも「俺たちぽっちゃりだよな」と笑い合ってきた仲間にも伝えてみました。
+ すると彼は迷うことなく「じゃあ俺もやってみる！」と挑戦してくれたんです。
+その結果、無理なく続けながら体が少しずつ変わっていき、
+ ある日「家族に痩せたね！って言われた」と、嬉しそうに報告してくれました。
+その瞬間、確信しました。
+ これは僕だけの特別な方法じゃない。誰にでもできる仕組みなんだ
+              </p>
+            </div>
+            <div class="card-media"><img src="images/story-6.jpg" alt=""></div>
+          </div>
+          <button class="edge-arrow prev" aria-label="前へ">◀</button>
+          <button class="edge-arrow next" aria-label="次へ">▶</button>
+        </div>
+      </article>
     </div>
 
+    <!-- 下部ナビ（ドット＋左右ボタン） -->
     <div class="container">
-      <nav class="story-nav" aria-label="ストーリーナビ">
+      <nav class="story-nav-v2" aria-label="ストーリーナビ">
         <button id="storyPrev" class="story-btn" aria-label="前へ">←</button>
         <ul id="storyDots" class="story-dots" role="tablist"></ul>
         <button id="storyNext" class="story-btn" aria-label="次へ">→</button>
       </nav>
+    </div>
+  </section>
+
+  <!-- ★ 追加：なぜ僕がやるのか -->
+  <section id="why" class="section why" aria-label="なぜ僕がやるのか">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-title">
+          <h2>なぜ僕がやるのか</h2>
+          <span class="why-rule" aria-hidden="true"></span>
+        </div>
+        <div class="why-body">
+          <p>僕は意志の弱い人間です。何度も挫折しました。<br>
+          でも、そんな僕でも <strong>3ヶ月で−15kg</strong> を達成できた。<br>
+          だからこそ「忙しい社会人」「運動嫌い」「揚げ物がやめられない」人の気持ちが分かるんです。<br>
+          ただの知識じゃなく、失敗と成功の両方を経験した僕だから伝えられる。</p>
+          <p>最初のハードルを下げて一人でも多くの人に続けられる感覚を知ってほしい。<br>
+          その思いで、このノウハウを無料でお届けしています。</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -88,19 +257,22 @@
     <div class="container">
       <h2>Q &amp; A</h2>
       <ul class="faq">
-        <li><strong>Q. テキストは無料ですか？</strong><br>A. 無料です。最初の一歩を体験してほしいから。</li>
-        <li><strong>Q. 運動が苦手ですが大丈夫？</strong><br>A. 1日5分から始める設計。ジム不要でもOK。</li>
-        <li><strong>Q. 食事制限は厳しい？</strong><br>A. 厳しい制限はありません。外食や揚げ物も工夫して継続可能。</li>
-        <li><strong>Q. 忙しい社会人でも続きますか？</strong><br>A. 習慣化の仕組みで、忙しくても続けられます。</li>
+        <li><strong>Q. テキストは無料ですか？</strong><br>A. 無料です。ぜひ最初の一歩を体験してください。</li>
+        <li><strong>Q. 運動が苦手ですが大丈夫？</strong><br>A. 大丈夫です。ジムに通わなくてもできる「小さな習慣」から始められるようにしています。</li>
+        <li><strong>Q. 食事制限は厳しい？</strong><br>A. 厳しい制限は一切ありません。揚げ物好きでも痩せられる工夫を取り入れています。</li>
+        <li><strong>Q. 忙しい社会人でも続きますか？</strong><br>A. 忙しい人でも成果を出せます。1日5分からできる仕組みを用意しています。</li>
       </ul>
     </div>
   </section>
 
   <!-- 最終CTA -->
-  <section id="contact" class="section last-cta">
+  <section id="contact" class="section last-cta" aria-label="最後に">
     <div class="container">
       <h2>最後に</h2>
-      <p class="lead">もし今、変わりたい気持ちがあるなら——その熱が消える前に一歩。先着枠で無料公開中です。</p>
+      <p class="lead">もし今、彼女や友達の何気ない一言に傷ついているなら。
+ もし「20歳の頃の自分に戻りたい」と思っているなら。
+ その気持ちが消える前に、行動してください。「変わりたい」と思った時が、人生を変えるベストタイミング。
+ あなたの一歩を、僕が全力で支えます。</p>
       <div class="cta-row">
         <a id="lineLast" class="btn-line btn-large" href="#" target="_blank" rel="noopener">LINEで無料登録</a>
         <a id="lineLastTxt" class="txt-link" href="#" target="_blank" rel="noopener">LINE追加リンクを開く</a>
@@ -108,10 +280,10 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <small>© Kai 2025</small>
-      <a href="#home" class="to-top">↑</a>
+      <a href="#home" class="to-top" aria-label="ページ上部へ">↑</a>
     </div>
   </footer>
 
